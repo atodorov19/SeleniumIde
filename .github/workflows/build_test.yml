@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v4
+    - name: Check current .Net version
+      run: dotnet -v
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
